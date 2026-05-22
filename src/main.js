@@ -1,4 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router' // Imports your router configuration
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+app.use(router) // Registers the router plugin
+
+app.mount('#app')
