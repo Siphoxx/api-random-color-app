@@ -7,6 +7,7 @@ import { RouterLink, RouterView } from 'vue-router';
     <nav class="nav-bar">
       <RouterLink to="/" class="nav-link">Home</RouterLink>
       <RouterLink to="/color-mixer" class="nav-link">Color Mixer</RouterLink>
+      <RouterLink to="/showcase" class="nav-link">Showcase</RouterLink>
     </nav>
 
     <main class="content-window">
@@ -46,9 +47,9 @@ body {
   transition: color 0.2s ease;
 }
 
-/* Vue Router automatically applies this class to whichever link is active! */
+/* Highlights active tab in Vue Green */
 .router-link-active {
-  color: #42b883 !important; /* Highlights active tab in Vue Green */
+  color: #42b883 !important;
 }
 
 .nav-link:hover {

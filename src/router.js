@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from './views/HomeView.vue';
 import ColorView from './views/ColorView.vue';
+import ProjectsView from './views/ProjectsView.vue';
+import ProjectDetailView from './views/ProjectDetailView.vue'; // 👈 1. Import the new details view
 
-// 1. Define the URL routes and map them to our page components
 const routes = [
   {
     path: '/',
@@ -13,12 +14,20 @@ const routes = [
     path: '/color-mixer',
     name: 'colorMixer',
     component: ColorView
+  },
+  {
+    path: '/showcase',
+    name: 'showcase',
+    component: ProjectsView
+  },
+  {
+    path: '/showcase/:id', // 👈 2. The colon (:) tells Vue that 'id' is a dynamic variable!
+    name: 'projectDetail',
+    component: ProjectDetailView
   }
 ];
 
-// 2. Create the router instance
 const router = createRouter({
-  // This enables clean URLs without hashes (e.g., /color-mixer instead of /#/color-mixer)
   history: createWebHistory(),
   routes
 });
